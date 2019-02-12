@@ -1,0 +1,21 @@
+
+\documentclass[12 pt] {article} 
+\usepackage[latin1]{inputenc}  
+\usepackage{amsmath}  
+\usepackage{amsfonts}  
+\usepackage{amssymb}  
+\usepackage{makeidx}  
+\usepackage{graphicx}  
+
+\title{Homework 3 - Equation}
+\author{Andrew Stauffer}
+
+\begin{document}
+\maketitle
+
+			
+The equation below is for the standard deviation of a set of data, where $s$ is the standard deviation variable, $N$ is the amount of values within the set, $x_i$ is the $i$th element in the set, and $\overline{x}$ is the average of the set of data. The equation looks as follows:
+
+$s=\sqrt{\frac{1}{N-1}\sum_{i=1}^N(x_i-\bar{x})^2}$.
+
+\end{document}

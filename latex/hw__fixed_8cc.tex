@@ -1,0 +1,73 @@
+\hypertarget{hw__fixed_8cc}{}\section{hw\+\_\+fixed.\+cc File Reference}
+\label{hw__fixed_8cc}\index{hw\+\_\+fixed.\+cc@{hw\+\_\+fixed.\+cc}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+Include dependency graph for hw\+\_\+fixed.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{hw__fixed_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{hw__fixed_8cc_a9cfdbe00bb990c14c3a9e59a7dbbc974}{deviation} (int $\ast$a, int n)
+\begin{DoxyCompactList}\small\item\em This function is to calculate standard deviation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+! 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{hw__fixed_8cc_a9cfdbe00bb990c14c3a9e59a7dbbc974}\label{hw__fixed_8cc_a9cfdbe00bb990c14c3a9e59a7dbbc974}} 
+\index{hw\+\_\+fixed.\+cc@{hw\+\_\+fixed.\+cc}!deviation@{deviation}}
+\index{deviation@{deviation}!hw\+\_\+fixed.\+cc@{hw\+\_\+fixed.\+cc}}
+\subsubsection{\texorpdfstring{deviation()}{deviation()}}
+{\footnotesize\ttfamily double deviation (\begin{DoxyParamCaption}\item[{int $\ast$}]{a,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+This function is to calculate standard deviation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & This variable is for the array of integers \\
+\hline
+{\em n} & This variable is the number of integers in the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function returns the standard deviation of the integers in the array 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file hw\+\_\+fixed.\+cc.
+
+
+\begin{DoxyCode}
+23 \{
+24     \textcolor{keywordtype}{int} sum;
+25     
+26     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i <= n-1; i++)
+27     \{
+28         sum += a[i];
+29     \} 
+30     
+31     \textcolor{keywordtype}{double} mean = sum /= (n-1);
+32     \textcolor{keywordtype}{double} stddev = 0;
+33     
+34     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i <= n-2; i++)
+35     \{
+36         stddev += (a[i] - mean) * (a[i] - mean); 
+37     \}
+38     
+39     stddev /= (n-1);
+40     
+41     \textcolor{keywordflow}{if}( stddev == 0)
+42         std::cout << \textcolor{stringliteral}{"Sigma is zero."} << std::endl;
+43     \textcolor{keywordflow}{return} sqrt(stddev);
+44 \}
+\end{DoxyCode}
